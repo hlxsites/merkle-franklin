@@ -182,7 +182,7 @@ header nav .nav-tools {
 @media (min-width: 1200px) {
   header nav .nav-tools {
     display: block;
-    border-left: solid 1px currentColor;
+    border-left: solid 1px currentcolor;
   }
 
 }

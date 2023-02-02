@@ -12,22 +12,22 @@
 
  /* fallback font for ProximaNova (normal - 400) */
  @font-face {
-  font-family: "proximanova-fallback";
+  font-family: proximanova-fallback;
   size-adjust: 98.439%;
   src: local("Arial");
 }
 
 :root {
   /* fonts */
-  --heading-font-family: ProximaNova, sans-serif;
-  --body-font-family: ProximaNova, sans-serif;
+  --heading-font-family: proximanova, proximanova-fallback, sans-serif;
+  --body-font-family: proximanova, proximanova-fallback, sans-serif;
   --fixed-font-family: "Roboto Mono", menlo, consolas, "Liberation Mono", monospace;
 
   /* colors */
   --text-color: #05051E;
   --link-color: #12295d;
   --link-hover-color: #12295d;
-  --background-color: #ffffff;
+  --background-color: #fff;
   --alt-background-color: #;
   --highlight-color: #F23A1D;
   --highlight-background-color: #12295d;
@@ -113,8 +113,8 @@ footer h2::before {
   position: absolute;
   display: block;
   content: '';
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   left: 0;
 }
 
@@ -196,7 +196,7 @@ select.lang-switcher {
   margin-left: 35px;
   border: none;
   background-color: transparent;
-  color: currentColor;
+  color: currentcolor;
   list-style: none;
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-xs);
@@ -316,8 +316,4 @@ main img {
 main .section[data-section-status='loading'],
 main .section[data-section-status='initialized'] {
   display: none;
-}
-
-main .section.highlight {
-  background-color: var(--highlight-background-color);
 }

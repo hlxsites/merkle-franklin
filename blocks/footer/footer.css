@@ -20,6 +20,11 @@ footer .footer > div > div:not(:first-of-type) {
   margin-left: 20px;
 }
 
+footer .footer p {
+  margin: 10px 0;
+  font-size: var(--body-font-size-xs);
+}
+
 footer .footer .footer-tag-line {
   width: 100%;
   order: -2;
@@ -53,11 +58,6 @@ footer .footer .footer-social .icon {
 footer .footer select {
   margin: 10px 0 6px -4px;
   font-weight: normal;
-}
-
-footer .footer p {
-  margin: 10px 0;
-  font-size: var(--body-font-size-xs);
 }
 
 footer .footer a:any-link {
