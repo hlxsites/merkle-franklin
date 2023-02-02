@@ -19,8 +19,8 @@
 
 :root {
   /* fonts */
-  --heading-font-family: ProximaNova, sans-serif;
-  --body-font-family: ProximaNova, sans-serif;
+  --heading-font-family: ProximaNova, proximanova-fallback, sans-serif;
+  --body-font-family: ProximaNova, proximanova-fallback, sans-serif;
   --fixed-font-family: "Roboto Mono", menlo, consolas, "Liberation Mono", monospace;
 
   /* colors */
