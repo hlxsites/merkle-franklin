@@ -28,6 +28,22 @@ function buildHeroBlock(main) {
 }
 
 /**
+ * Transforms a list into a language switcher dropdown.
+ * @param {HTMLUListElement} list The list element
+ */
+export function decorateLangSwitcher(list) {
+  const select = document.createElement('select');
+  [...list.children].forEach(({ textContent }) => {
+    const option = document.createElement('option');
+    option.value = textContent;
+    option.textContent = textContent;
+    select.append(option);
+  });
+  select.className = 'lang-switcher';
+  list.replaceWith(select);
+}
+
+/**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */

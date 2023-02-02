@@ -10,36 +10,53 @@
  * governing permissions and limitations under the License.
  */
 
- :root {
-  /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
-  --background-color: #fff;
-  --overlay-background-color: #eee;
-  --highlight-background-color: #ccc;
-  --text-color: #000;
+ /* fallback font for ProximaNova (normal - 400) */
+ @font-face {
+  font-family: "proximanova-fallback";
+  size-adjust: 98.439%;
+  src: local("Arial");
+}
 
+:root {
   /* fonts */
-  --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
-  --heading-font-family: var(--body-font-family);
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+  --heading-font-family: ProximaNova, sans-serif;
+  --body-font-family: ProximaNova, sans-serif;
+  --fixed-font-family: "Roboto Mono", menlo, consolas, "Liberation Mono", monospace;
 
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 18px;
-  --body-font-size-xs: 16px;
+  /* colors */
+  --text-color: #05051E;
+  --link-color: #12295d;
+  --link-hover-color: #12295d;
+  --background-color: #ffffff;
+  --alt-background-color: #;
+  --highlight-color: #F23A1D;
+  --highlight-background-color: #12295d;
 
-  /* heading sizes */
+  /* sizes */
+  --heading-font-size-xxxl: 72px;
   --heading-font-size-xxl: 48px;
   --heading-font-size-xl: 40px;
   --heading-font-size-l: 32px;
   --heading-font-size-m: 24px;
-  --heading-font-size-s: 20px;
-  --heading-font-size-xs: 18px;
+  --heading-font-size-s: 18.72px;
+  --heading-font-size-xs: 16px;
+  --heading-font-size-xxs: 13.28px;
+  --body-font-size-xl: 40px;
+  --body-font-size-l: 32px;
+  --body-font-size-m: 20px;
+  --body-font-size-s: 16px;
+  --body-font-size-xs: 14px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 113px;
 
+  /* heading decoration */
+  --heading-1-padding-left: 22px;
+  --heading-1-decoration-width: 16px;
+  --heading-1-decoration-top: 20px;
+  --heading-2-padding-left: 14px;
+  --heading-2-decoration-width: 12px;
+  --heading-2-decoration-top: 17px;
 }
 
 body {
@@ -58,24 +75,58 @@ body.appear {
 
 header {
   height: var(--nav-height);
+  background-color: var(--highlight-background-color);
 }
 
 h1, h2, h3,
 h4, h5, h6 {
   font-family: var(--heading-font-family);
   font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: .5em;
+  line-height: 1.2;
+  margin: 0;
   scroll-margin: calc(var(--nav-height) + 1em);
 }
 
-h1 { font-size: var(--heading-font-size-xxl) }
-h2 { font-size: var(--heading-font-size-xl) }
-h3 { font-size: var(--heading-font-size-l) }
-h4 { font-size: var(--heading-font-size-m) }
-h5 { font-size: var(--heading-font-size-s) }
-h6 { font-size: var(--heading-font-size-xs) }
+h1 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: var(--heading-font-size-xl);
+  padding-left: var(--heading-1-padding-left);
+}
+
+h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: var(--heading-font-size-l);
+  padding-left: var(--heading-2-padding-left);
+}
+
+h3 { font-size: var(--heading-font-size-m) }
+h4 { font-size: var(--heading-font-size-s) }
+h5 { font-size: var(--heading-font-size-xs) }
+h6 { font-size: var(--heading-font-size-xxs) }
+
+h1::before,
+h2::before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 0px;
+  height: 0px;
+  left: 0;
+}
+
+h1::before {
+  border-top: var(--heading-1-decoration-width) solid var(--highlight-color);
+  border-left: var(--heading-1-decoration-width) solid transparent;
+  top: var(--heading-1-decoration-top);
+}
+
+h2::before {
+  border-top: var(--heading-2-decoration-width) solid var(--highlight-color);
+  border-left: var(--heading-2-decoration-width) solid transparent;
+  top: var(--heading-2-decoration-top);
+}
 
 p, dl, ol, ul, pre, blockquote {
   margin-top: 1em;
@@ -88,7 +139,6 @@ a:any-link {
 }
 
 a:hover {
-  text-decoration: underline;
   color: var(--link-hover-color);
 }
 
@@ -101,10 +151,6 @@ code, samp {
   padding: .125em;
 }
 
-pre {
-  overflow: scroll;
-}
-
 /* buttons */
 
 a.button:any-link, button {
@@ -115,7 +161,7 @@ a.button:any-link, button {
   border: 2px solid transparent;
   padding: 5px 30px;
   text-align: center;
-  font-style: normal; 
+  font-style: normal;
   font-weight: 600;
   cursor: pointer;
   color: var(--background-color);
@@ -133,7 +179,6 @@ a.button:hover, a.button:focus, button:hover, button:focus  {
 }
 
 button:disabled, button:disabled:hover {
-  background-color: var(--overlay-background-color);
   cursor: unset;
 }
 
@@ -141,8 +186,20 @@ a.button.secondary, button.secondary {
   background-color: unset;
   border: 2px solid currentcolor;
   color: var(--text-color)
-} 
+}
 
+/* language switcher */
+select.lang-switcher {
+  margin-left: 35px;
+  border: none;
+  background-color: transparent;
+  color: currentColor;
+  list-style: none;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  cursor: pointer;
+}
 
 main input {
   font-size: 1.25rem;
@@ -150,7 +207,7 @@ main input {
   max-width: 50rem;
   display: block;
   margin-bottom: 1rem;
-  padding: 0.75rem 0.6rem;    
+  padding: 0.75rem 0.6rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
   border: 1px solid var(--text-color);
@@ -163,13 +220,26 @@ main input:hover {
 }
 
 main .section {
-  padding: 64px 16px;
+  padding: 40px 30px;
+}
+
+main .section.highlight {
+  background-color: var(--highlight-background-color);
+  color: var(--background-color);
+}
+
+main .section.highlight p:first-of-type {
+  padding-left: var(--heading-1-padding-left);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
 }
 
 main pre {
-  background-color: var(--overlay-background-color);
+  background-color: #ddd;
   padding: 1em;
   border-radius: .25em;
+  overflow: scroll;
   overflow-x: auto;
   white-space: pre;
 }
@@ -205,21 +275,33 @@ main img {
 }
 
 @media (min-width: 600px) {
+  :root {
+    --heading-1-padding-left: 28px;
+    --heading-1-decoration-width: 20px;
+    --heading-1-decoration-top: 23px;
+  }
+
+  h1 {
+    font-size: var(--heading-font-size-xxl);
+  }
+
   main .section {
     padding: 64px 32px;
-  }  
+  }
 }
 
 @media (min-width: 900px) {
   :root {
-    --heading-font-size-xxl: 60px;
-    --heading-font-size-xl: 48px;
-    --heading-font-size-l: 36px;
-    --heading-font-size-m: 30px;
-    --heading-font-size-s: 24px;
-    --heading-font-size-xs: 22px;  
+    --heading-1-padding-left: 40px;
+    --heading-1-decoration-width: 24px;
+    --heading-1-decoration-top: 37px;
   }
-  
+
+  h1 {
+    margin-top: 20px;
+    font-size: var(--heading-font-size-xxxl);
+  }
+
   .section > div {
     max-width: 1200px;
     margin: auto;

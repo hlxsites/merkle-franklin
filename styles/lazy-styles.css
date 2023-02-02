@@ -1,1 +1,25 @@
 /* below the fold CSS goes here */
+@font-face {
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: 400;
+  font-weight: normal;
+  font-display: swap;
+  src: url("/styles/fonts/ProximaNova-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/styles/fonts/ProximaNova-Semibold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/styles/fonts/ProximaNova-Bold.ttf") format("truetype");
+}

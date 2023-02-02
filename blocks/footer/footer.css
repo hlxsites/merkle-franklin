@@ -1,14 +1,108 @@
 footer {
   padding: 2rem;
-  background-color: var(--overlay-background-color);
+  background-color: var(--highlight-background-color);
+  color: var(--background-color);
   font-size: var(--body-font-size-s);
 }
 
 footer .footer {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+}
+
+footer .footer > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .footer > div > div:not(:first-of-type) {
+  margin-left: 20px;
+}
+
+footer .footer .footer-tag-line {
+  width: 100%;
+  order: -2;
+  text-align: center;
+  flex-grow: 1;
+}
+
+footer .footer .footer-social {
+  order: -1;
+  width: 100%;
+  flex-grow: 1;
+  margin: 20px 0;
+  display: flex;
+  gap: 0 20px;
+}
+
+footer .footer .footer-social p {
+  margin: 0;
+}
+
+footer .footer .footer-social .icon {
+  display: block;
+  box-sizing: border-box;
+  padding: 8px;
+  margin: 0;
+  width: 32px;
+  height: 32px;
+  background-color: var(--highlight-color);
+}
+
+footer .footer select {
+  margin: 10px 0 6px -4px;
+  font-weight: normal;
 }
 
 footer .footer p {
-  margin: 0;
+  margin: 10px 0;
+  font-size: var(--body-font-size-xs);
+}
+
+footer .footer a:any-link {
+  color: var(--background-color);
+}
+
+footer .footer h2 {
+  display: inline-block;
+  font-size: var(--heading-font-size-m);
+  line-height: 40px;
+  padding-left: 10px;
+}
+
+footer .footer h2::before {
+  border-top-width: 8px;
+  border-left-width: 8px;
+  top: 19px;
+}
+
+@media (min-width: 600px) {
+  footer .footer .footer-social {
+    width: 100px;
+    order: unset;
+    flex-grow: unset;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 1200px) {
+    footer .footer .footer-tag-line {
+      width: initial;
+      order: unset;
+      flex-grow: unset;
+      flex-wrap: wrap;
+    }
+
+    footer .footer h2 {
+      font-size: var(--heading-font-size-xl);
+      line-height: 1.2;
+      padding-left: 18px;
+    }
+
+    footer .footer h2::before {
+      border-top-width: 8px;
+      border-left-width: 8px;
+      top: 19px;
+    }
+  }
 }
