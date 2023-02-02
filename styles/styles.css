@@ -226,8 +226,18 @@ main .section {
   padding: 40px 30px;
 }
 
+main .section h2 {
+  margin-bottom: 60px;
+}
+
+/* highlight section */
+
 main .section.highlight {
   background-color: var(--highlight-background-color);
+  color: var(--background-color);
+}
+
+main .section.highlight a:any-link {
   color: var(--background-color);
 }
 
@@ -237,6 +247,32 @@ main .section.highlight p:first-of-type {
   font-weight: 600;
   line-height: 24px;
 }
+
+/* numbered section */
+
+main .section.numbered {
+  position: relative;
+}
+
+main .section.numbered::before {
+  position: absolute;
+  right: 25px;
+  border-top: 2px solid currentcolor;
+  font-size: var(--body-font-size-xs);
+  padding: 10px 0;
+  content: "01";
+}
+
+main .section.number-1::before { content: "01" }
+main .section.number-2::before { content: "02" }
+main .section.number-3::before { content: "03" }
+main .section.number-4::before { content: "04" }
+main .section.number-5::before { content: "05" }
+main .section.number-6::before { content: "06" }
+main .section.number-7::before { content: "07" }
+main .section.number-8::before { content: "08" }
+main .section.number-9::before { content: "09" }
+main .section.number-10::before { content: "10" }
 
 main pre {
   background-color: #ddd;
@@ -290,6 +326,10 @@ main img {
 
   main .section {
     padding: 64px 32px;
+  }
+
+  main .section.numbered::before {
+    right: 35px;
   }
 }
 
