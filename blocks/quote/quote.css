@@ -1,0 +1,74 @@
+.quote-wrapper {
+  margin: 40px 0;
+}
+
+.quote {
+    padding: 0;
+}
+
+.quote > div {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quote > .quote-heading {
+    margin: 0 auto 20px;
+}
+
+.quote h2 {
+    margin: 0;
+}
+
+.quote > div[class^="z-row"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:  var(--spacing-m);
+    margin-bottom: 80px;
+}
+
+.quote > div[class^="z-row"] > div img {
+  margin: 40px auto;
+}
+
+.quote-cta {
+    text-align: center;
+}
+
+@media (min-width: 900px) {
+  .quote > div[class^="z-row"] {
+    display: flex;
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: right;
+    gap: 40px;
+  }
+
+  .quote > div[class^="z-row"] > div {
+    text-align: left;
+    width: 55%;
+  }
+
+  .quote > div[class^="z-row"] > div:first-child {
+    position: absolute;
+    background-color: var(--background-color);
+    padding: 40px 20px;
+    z-index: 1;
+  }
+
+  .quote > div.z-row-even > div:first-child {
+    left: 0;
+  }
+
+  .quote > div.z-row-odd {
+    justify-content: left;
+  }
+
+  .quote > div.z-row-odd > div:first-child {
+    order: 2;
+    right: 0;
+  }
+}
