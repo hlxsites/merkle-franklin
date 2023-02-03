@@ -1,7 +1,12 @@
+:root {
+    --toc-color: #60607D;
+}
+
 .toc > div {
     display: flex;
     flex-direction: column;
     font-size: var(--body-font-size-xs);
+    color: var(--toc-color);
 }
 
 .toc > div > div {
