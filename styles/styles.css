@@ -238,6 +238,13 @@ main .section.highlight p:first-of-type {
   line-height: 24px;
 }
 
+/* captions */
+main .default-content-wrapper p picture + em {
+  font-size: var(--body-font-size-s);
+  color: var(--link-color);
+  font-style: normal;
+}
+
 main pre {
   background-color: #ddd;
   padding: 1em;
