@@ -31,9 +31,13 @@
     text-align: center;
 }
 
+.columns.facts > div > div p {
+    color: var(--link-color);
+    font-weight: 600;
+}
+
 .columns.facts > div > div p:first-child {
     font-size: 120px;
-    font-weight: 700;
     color: var(--link-color);
     margin: 30px 0 70px;
 }
