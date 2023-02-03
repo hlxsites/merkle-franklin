@@ -75,14 +75,14 @@ footer .footer a:any-link {
 footer .footer h2 {
   display: inline-block;
   font-size: var(--heading-font-size-m);
-  line-height: 40px;
+  line-height: 1;
   padding-left: 10px;
 }
 
 footer .footer h2::before {
   border-top-width: 8px;
   border-left-width: 8px;
-  top: 19px;
+  top: 12px;
 }
 
 @media (min-width: 600px) {
@@ -104,13 +104,13 @@ footer .footer h2::before {
     footer .footer h2 {
       font-size: var(--heading-font-size-xl);
       line-height: 1.2;
-      padding-left: 18px;
+      padding-left: 24px;
     }
 
     footer .footer h2::before {
-      border-top-width: 8px;
-      border-left-width: 8px;
-      top: 19px;
+      border-top-width: 20px;
+      border-left-width: 20px;
+      top: 18px;
     }
   }
 }
