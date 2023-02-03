@@ -51,6 +51,14 @@
     color: var(--text-color);
 }
 
+.section.highlight .cards h2,
+.section.highlight .cards h3,
+.section.highlight .cards h4,
+.section.highlight .cards h5,
+.section.highlight .cards h6 {
+    color: var(--link-color);
+}
+
 .section.highlight .cards p:first-of-type {
     padding-left: 0;
     font-size: var(--body-font-size-s);

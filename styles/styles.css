@@ -83,6 +83,7 @@ h4, h5, h6 {
   font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.2;
+  color: var(--link-color);
   margin: 0;
   scroll-margin: calc(var(--nav-height) + 1em);
 }
@@ -234,6 +235,15 @@ main .section h2 {
 
 main .section.highlight {
   background-color: var(--highlight-background-color);
+  color: var(--background-color);
+}
+
+main .section.highlight h1,
+main .section.highlight h2,
+main .section.highlight h3,
+main .section.highlight h4,
+main .section.highlight h5,
+main .section.highlight h6 {
   color: var(--background-color);
 }
 
