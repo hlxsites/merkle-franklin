@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     grid-gap: 16px;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .cards .cards-card-body {
-    margin: 16px;
+    margin: 32px;
 }
 
 .cards .cards-card-image {
@@ -28,4 +28,31 @@
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+}
+
+@media (min-width: 900px) {
+    /* wave cards */
+    .cards.wave > ul > li {
+        height: fit-content;
+    }
+
+    .cards.wave > ul > li.card-wave-low {
+        margin-top: 50px;
+    }
+
+    .cards.wave > ul > li.card-wave-medium {
+        margin-top: 20px;
+    }
+}
+
+/* cards in highlight section */
+
+.section.highlight .cards {
+    color: var(--text-color);
+}
+
+.section.highlight .cards p:first-of-type {
+    padding-left: 0;
+    font-size: var(--body-font-size-s);
+    font-weight: normal;
 }
