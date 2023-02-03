@@ -23,3 +23,18 @@
         margin-left: unset;
     }
 }
+
+/* facts columns */
+
+.columns.facts > div > div {
+    background: url("/icons/facts.svg") center -40px no-repeat;
+    text-align: center;
+}
+
+.columns.facts > div > div p:first-child {
+    font-size: 120px;
+    font-weight: 700;
+    color: var(--link-color);
+    margin: 30px 0 70px;
+}
+
