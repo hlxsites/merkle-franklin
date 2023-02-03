@@ -274,6 +274,13 @@ main .section.number-8::before { content: "08" }
 main .section.number-9::before { content: "09" }
 main .section.number-10::before { content: "10" }
 
+/* captions */
+main .default-content-wrapper p picture + em {
+  font-size: var(--body-font-size-s);
+  color: var(--link-color);
+  font-style: normal;
+}
+
 main pre {
   background-color: #ddd;
   padding: 1em;
