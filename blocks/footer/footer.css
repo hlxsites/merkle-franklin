@@ -20,6 +20,14 @@ footer .footer > div > div:not(:first-of-type) {
   margin-left: 20px;
 }
 
+footer .footer h2,
+footer .footer h3,
+footer .footer h4,
+footer .footer h5,
+footer .footer h6 {
+  color: var(--background-color);
+}
+
 footer .footer p {
   margin: 10px 0;
   font-size: var(--body-font-size-xs);
