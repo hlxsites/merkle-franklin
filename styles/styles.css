@@ -158,37 +158,35 @@ code, samp {
 
 a.button:any-link, button {
   font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
   display: inline-block;
   box-sizing: border-box;
   text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
+  padding: 10px 20px;
   text-align: center;
-  font-style: normal;
-  font-weight: 600;
   cursor: pointer;
   color: var(--background-color);
-  background-color: var(--link-color);
+  background-color: var(--highlight-color);
+  border: none;
   margin: 16px 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
-  background-color: var(--link-hover-color);
   cursor: pointer;
 }
 
 button:disabled, button:disabled:hover {
+  opacity: 0.7;
   cursor: unset;
 }
 
 a.button.secondary, button.secondary {
   background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color)
+  color: currentcolor;
 }
 
 /* language switcher */
@@ -202,24 +200,6 @@ select.lang-switcher {
   font-size: var(--body-font-size-xs);
   font-weight: 600;
   cursor: pointer;
-}
-
-main input {
-  font-size: 1.25rem;
-  width: 100%;
-  max-width: 50rem;
-  display: block;
-  margin-bottom: 1rem;
-  padding: 0.75rem 0.6rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  border: 1px solid var(--text-color);
-  color: var(--text-color);
-  background-color: var(--background-color);
-}
-
-main input:hover {
-  border: 1px solid var(--text-color);
 }
 
 main .section {
