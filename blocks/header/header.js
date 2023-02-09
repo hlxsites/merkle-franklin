@@ -1,4 +1,4 @@
-import { readBlockConfig, decorateIcons } from '../../scripts/lib-franklin.js';
+import { decorateIcons, getMetadata } from '../../scripts/lib-franklin.js';
 import { decorateLangSwitcher } from '../../scripts/scripts.js';
 
 // media query match that indicates mobile/tablet width
@@ -91,11 +91,10 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
  * @param {Element} block The header block element
  */
 export default async function decorate(block) {
-  const config = readBlockConfig(block);
   block.textContent = '';
 
   // fetch nav content
-  const navPath = config.nav || '/nav';
+  const navPath = getMetadata('nav').trim() || '/nav';
   const resp = await fetch(`${navPath}.plain.html`);
 
   if (resp.ok) {
