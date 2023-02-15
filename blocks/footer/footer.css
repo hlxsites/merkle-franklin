@@ -49,10 +49,6 @@ footer .footer .footer-social {
   gap: 0 20px;
 }
 
-footer .footer .footer-social p {
-  margin: 0;
-}
-
 footer .footer .footer-social .icon {
   display: block;
   box-sizing: border-box;
