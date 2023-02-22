@@ -30,6 +30,11 @@
     padding-bottom: 1em;
 }
 
+.toc .toc-item p strong a.hash-link {
+    background-color:transparent;
+    color: var(--link-hover-color);
+}
+
 .toc .toc-item::before {
     position: absolute;
     top: 1em;

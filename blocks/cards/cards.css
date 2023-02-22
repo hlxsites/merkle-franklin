@@ -64,3 +64,8 @@
     font-size: var(--body-font-size-s);
     font-weight: normal;
 }
+
+.section .cards ul li:hover {
+    background-color: #12295d;
+    color: #fff;
+}
