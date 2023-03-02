@@ -49,7 +49,7 @@
 }
 
 .columns.facts  > div > div > p:first-of-type{
-    transition: --num 1s;
+    transition: var(--num) 1s;
     counter-set: num var(--num);
 }
 
