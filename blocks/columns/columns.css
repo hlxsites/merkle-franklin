@@ -42,3 +42,37 @@
     margin: 30px 0 70px;
 }
 
+/* stylelint-disable */
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+.columns.facts  > div > div > p:first-of-type{
+    transition: --num 1s;
+    counter-set: num var(--num);
+}
+/* stylelint-enable */
+
+.columns.facts > div > div > p:first-of-type::before {
+    content: counter(num);
+}
+
+body {
+    margin: 2rem;
+}
+
+
+.bluecolumn {
+    background-color: var(--highlight-background-color);
+    color: var(--background-color);
+}
+
+.bluecolumn h3 {
+    color: white;
+}
+
+.bluecolumn h2 {
+    color: white;
+}
