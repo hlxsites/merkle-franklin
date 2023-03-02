@@ -13,7 +13,7 @@ module.exports = {
   rules: {
     // allow reassigning param
     'no-param-reassign': [2, { props: false }],
-    'custom-property-no-missing-var-function': [0, { ignoreProperties: ['transition', 'transition-property'] }],
+    'custom-property-no-missing-var-function': [false],
     'linebreak-style': ['error', 'unix'],
     'import/extensions': ['error', {
       js: 'always',
